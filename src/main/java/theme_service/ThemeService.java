@@ -5,11 +5,18 @@ import theme_service.controller.ThemeController;
 import java.net.URISyntaxException;
 import static spark.Spark.*;
 
-
+/**
+ * @author      József Balogh
+ * @version     1.0
+ */
 public class ThemeService {
 
     private ThemeController controller;
 
+    /**
+     * The server starts on localhost/600001
+     * @param args
+     */
     public static void main(String[] args) {
 
         port(60001);

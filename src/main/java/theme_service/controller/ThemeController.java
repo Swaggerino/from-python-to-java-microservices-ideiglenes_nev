@@ -10,9 +10,19 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-
+/**
+ * @author      József Balogh
+ * @version     1.0
+ */
 public class ThemeController {
-
+    /**
+     * <p>The method checks the current date, by the month, decides the actual season, selects two links,
+     * one is a bootswatch ( a free to use online-imported bootstrap theme), another is a picture link.
+     * In the end puts them into a hashmap. </p>
+     * @param request
+     * @param response
+     * @return Returns a Json file, containing the 2 links, using gsonbuilder.
+     */
     public String getTheme(Request request, Response response) {
         LocalDate today = LocalDate.now();
         int month = today.getMonthValue();
@@ -51,3 +61,4 @@ public class ThemeController {
         return gson.toJson(result);
     }
 }
+
